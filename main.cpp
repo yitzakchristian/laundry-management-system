@@ -212,7 +212,7 @@ bool kembaliKeMenu() {
     return pilih == 1;
 }
 
-int main() {
+int adminMenu() {
     int pilihan;
 
     do {
@@ -256,5 +256,44 @@ int main() {
     } while (kembaliKeMenu());
 
     cout << "Terima kasih telah menggunakan aplikasi ini!\n";
+}
+
+int customerMenu() {
+    int pilihan;
+
+    do {
+        system("cls");
+        header();
+        cout << "1. Catat Keluhan Pelanggan\n";
+        cout << "2. Keluar\n";
+        cout << "Pilih menu: ";
+        cin >> pilihan;
+
+        switch (pilihan) {
+            case 1:
+                catatPesanan();
+                break;
+            case 2:
+                cout << "Terima kasih telah menggunakan aplikasi ini!\n";
+                return 0;
+            default:
+                cout << "Pilihan tidak valid.\n";
+        }
+    } while (kembaliKeMenu());
+
+    cout << "Terima kasih telah menggunakan aplikasi ini!\n";
+}
+
+int main() {
+    string userLog;
+    cout << "Selamat datang!" << endl;
+    cout << "Masuk sebagai (admin/customer): "; cin >> userLog;
+
+    if (userLog == "admin") {
+        adminMenu();
+    } else if (userLog == "customer") {
+        customerMenu();
+    }
+
     return 0;
 }
