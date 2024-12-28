@@ -1,2 +1,7 @@
-# Tugas Ujian Akhir Semester 1 - Algoritma (Cakrawala University)
-- Laundry Management System
+# Laundry Management System App
+
+Created by:
+- Riyo Rialdy Urda
+- Haikal Azzam
+- Allan Ardi
+- Christian Abraham Yitzak
